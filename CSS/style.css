@@ -1,0 +1,192 @@
+body{
+    background-color: rgb(211, 216, 178);
+    color: rgb(16, 74, 125);
+    font-size: 20px;
+    animation: slidein 0.5s ease-in;
+}
+ h1{
+    font-size: 38pt;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    align-self: center;
+    margin-bottom: 20px;
+    margin-top: 15px;
+ }
+
+ h2{
+    font-size: 24pt;
+    font-family: cursive;
+    color:rgb(25, 96, 96);
+    margin-top: 15px;
+    
+ }
+
+ h3{
+    font-size: 20pt;
+    font-family:fantasy;
+    color:rgb(65, 99, 172);
+    margin-top: 20px;
+ }
+
+ img{
+    border: 5px solid;
+    padding: 10px;
+    margin: 20px;
+    border-top-right-radius: 30px;
+    height: 300px;
+    width: 90%;
+    
+ }
+
+ li{
+   margin-left: 10%;
+   color: #00008b;
+   height: 10px;
+ }
+
+ nav{
+   border: 2px solid black;
+   
+ }
+
+
+
+ nav li{
+   text-decoration: underline solid blue;
+   display: inline-block;
+   color: #3566ff;
+ }
+
+ .gallery{
+   border: 5px solid;
+   padding: 5px;
+   margin: 20px;
+   height: 200px;
+   width: 15%vw;
+ }
+
+ #skip{
+  position:absolute;
+  left:-500px;
+  top: 50px;
+  text-decoration: underline solid blue;
+ }
+
+ #skip:focus{
+  left: 200px;
+ }
+
+ #current{
+  background-color: #ffffff;
+  font-size: 22px;
+ }
+
+ .grid{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+  .grid > div {
+    
+    text-align: center;
+      
+    font-size: 17px;
+    height: 50vh;
+    width: 100%;
+      
+  }
+
+
+@keyframes slidein {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+@keyframes slideinleft {
+  from {
+    transform: translateX(200%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  body{
+    animation:none;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  nav{
+    border: 2px solid black;
+    height: 40px;
+  }
+  nav li{
+    text-decoration: underline solid blue;
+    display: inline-block;
+    font-size: 20px;
+    padding-right: 80px;
+    padding-top: 10px;
+  }
+  nav li a:hover, nav li a:focus{
+    background-color: #c74f4f68;
+    font-size: 25px;
+  }
+  #current{
+    background-color: #ffffff;
+    font-size: 25px;
+   }
+  .gallery{
+    border: 5px solid;
+    padding: 5px;
+    margin: 20px;
+    height: 450px;
+    width: 15%vw;
+  }
+
+  .grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .grid > div {
+    font-size: 17px;
+    height: 50vh;
+  }
+  .left{
+    grid-column: 1/span 2;
+    animation: slidein 0.5s ease-in;
+  }
+
+  .right{
+    grid-column: 2/span 2;
+    animation: slideinleft 0.5s ease-in;
+  }
+
+  figure{
+    font-size: 25px;
+  }
+
+  p{
+    font-size: 25px;
+  }
+
+  h2{
+    font-size: 40px;
+  }
+
+  h3{
+    font-size: 35px;
+  }
+  li{
+    font-size: 30px;
+    display: inline-block;
+  }
+
+  .right:hover, .right:focus, .left:hover, .left.focus{
+    grid-column: 1/span 3;
+  }
+}
+
